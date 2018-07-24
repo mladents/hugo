@@ -1,3 +1,4 @@
+bind = "0.0.0.0:1313"
 baseURL = "https://dvb-admin-poc-int-ece.daimler.com/docs"
 languageCode = "en-us"
 title = "Hugo Example Blog"
