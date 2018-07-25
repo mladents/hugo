@@ -8,7 +8,7 @@ weight: 15
 
 - For the base setup, see:
 - Additionally, install the following plugins
-- [helm secrets](helm plugin install https://github.com/futuresimple/helm-secrets)
+-- [helm secrets](helm plugin install https://github.com/futuresimple/helm-secrets)
 
 
 ## Helm app installation script
