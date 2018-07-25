@@ -1,42 +1,26 @@
-Hugo Example Blog
-=================
+![Linode logo](docs/assets/linode_readme_logo.png)
 
-This repository provides a fully-working example of a [Hugo](https://github.com/gohugoio/hugo)-powered blog. Many
-Hugo-specific features are used as a way to see them in action, and hopefully ease the learning curve for creating your
-very own site with Hugo.
+# Guides and Tutorials [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/) [![first-timers-only](http://img.shields.io/badge/first--timers--only-friendly-blue.svg)](http://www.firsttimersonly.com/)
 
-Features
---------
+<img align="right" width="100" height="100" src="docs/assets/linode_readme_book.png">
 
-- Recent Posts at main index
-- Indexes for `tags` and `categories`
-- Post information block, with links for all `tags` and `categories` post belongs to
-- [Bootstrap 3](http://getbootstrap.com/) ready
-  - Currently using the [Yeti](http://bootswatch.com/yeti/) theme from http://bootswatch.com/
+###### [Contributing](CONTRIBUTING.md) | [Formatting Guide](https://linode.com/docs/linode-writers-formatting-guide/)
 
-Common things that should be added in the near future *(pull requests are welcome!)*:
+> Linode maintains a library of tutorials hosted at https://www.linode.com/docs/. The guides serve as an easy to follow reference for Linux, web servers, development, and more.
 
-- Disqus integration
-- More content types to demonstrate different layout methods
-  - About Me
-  - Contact
+### Quickstart
 
-Getting Started
----------------
+1. Fork and clone this repository.
 
-To get started, you should simply fork or clone this repository! That's definitely an important first step.
+2. Download the latest version of [Hugo](https://gohugo.io/).
 
-[Install Hugo](http://gohugo.io/overview/installing) in a way that best suits your environment and comfort level.
+3. Navigate into the cloned repo and run `hugo server`.
 
-Edit `config.toml` and change the default properties to suit your own information. This is not required to run the
-example, but this is the global configuration file and you're going to need to use it eventually. Start here!
+4. On a web browser, navigate to `localhost:1313/docs/`.
 
-In a command prompt or terminal, navigate to the path that contains your `config.toml` file and run `hugo`. That's it!
-You should now have a `public` directory with a complete blog! Open `public/index.html` in your browser and bask.
+## How can I write a guide?
 
-If that wasn't amazing enough, from the same terminal, run `hugo server`. This will watch your directories for changes
-and rebuild the site immediately, *and* it will make these changes available at http://localhost:1313/ so you can view
-your finished site in your browser. Go on, try it. This is one of the best ways to preview your site while working on it.
+We are constantly looking to improve the quality of our library. See our [rotating list of suggested topics](https://www.linode.com/docs/contribute/).
 
-To further learn Hugo and learn more, read through the Hugo [documentation](http://gohugo.io/overview/introduction)
-or browse around the files in this repository. Have fun!
+More detailed instructions on submitting a pull request can be found [here](CONTRIBUTING.md).
+
