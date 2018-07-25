@@ -28,8 +28,8 @@ class Docs404Spider(CrawlSpider):
 #    Delay if server is returning lots of 500s
 #    DOWNLOAD_DELAY=0.1
     name = 'docs404'
-    allowed_domains = ['localhost' ]
-    start_urls = ['http://localhost:1313/docs','http://localhost:1313/docs/contribute/thankyou']
+    allowed_domains = ['localhost','dvb-admin-poc-int-ece.daimler.com']
+    start_urls = ['http://dvb-admin-poc-int-ece.daimler.com/docs','http://dvb-admin-poc-int-ece.daimler.com/docs/contribute/thankyou']
     handle_httpstatus_list = [404]
 
     rules = (

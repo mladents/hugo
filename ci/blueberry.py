@@ -26,7 +26,7 @@ from pathlib import Path
 
 
 REPORT_KEYS = ['files', 'excluded_files', 'directories']
-BASE_URL = 'http://localhost:1313/docs/'
+BASE_URL = 'http://dvb-admin-poc-int-ece.daimler.com/docs/'
 OPTIONAL_PARAMS = ['args', 'kwargs']
 WORKING_DIR = os.getcwd()
 
