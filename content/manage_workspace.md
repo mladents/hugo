@@ -2,13 +2,13 @@
 title: "Manage your workspace"
 date: 2018-07-25T00:57:40+03:00
 anchor: "workspace"
-weight: 15
+weight: 40
 ---
 
-# Workspace Overview
+## Workspace Overview
 
-# Request a workspace
+## Request a workspace
 
-# Grant access to specific users
+## Grant access to specific users
 
-# Deploy resources
+## Deploy resources
