@@ -23,4 +23,4 @@ As the kubernets commnand line tools to not support multiple factors for authent
 
 ## Authorization
 
-An authenticated id_token and an stunnel connection does not automatically guarantee access to kubernetes resources. The authenticated user id needs to be explicitly added to the set of roles controlling access to the namespace in which the 
+An authenticated id_token and an stunnel connection does not automatically guarantee access to kubernetes resources. The authenticated user id needs to be explicitly added to the set of roles controlling access to the namespace in which the access resource exist. These roles are usually managed by the namespace administrators in the form a kubernetes resources called `Roles` and `RoleBindings`. Please check back with teh namespace administrators to grant access.
