@@ -19,16 +19,16 @@ stunnel expects the client certificate in the form of a pem file, containing cer
 
 ## Setup stunnel
 
-- Create a directory and navigate to it
-- Place the pem file containing your cert/private key in a file call `daivb-kube-client.pem`
-- Create a self-signed certificate with CN=localhost and place it in `localhost.pem`
+1. Create a directory and navigate to it
+2. Place the pem file containing your cert/private key in a file call `daivb-kube-client.pem`
+3. Create a self-signed certificate with CN=localhost and place it in `localhost.pem`
 
 ```bash
 openssl req -new -newkey rsa:2048 -days 365 -subj '/CN=localhost' -nodes -x509 -keyout localhost.key -out localhost.crt
 cat localhost.crt localhost.key > localhost.pem
 ```
 
-- Create a config file called `stunnel-daivbkube.conf` and add the following content
+4. Create a config file called `stunnel-daivbkube.conf` and add the following content
 
 ```text
 ; Debugging stuff (may be useful for troubleshooting)

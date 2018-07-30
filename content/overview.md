@@ -13,13 +13,13 @@ We provide access to the kubernetes API over the Internet, protected by two fact
 
 Authenticating the id_token during teh first step does not provide access to the API yet. Apart from the login process, a specific user ID also needs authorization to the kubernetes resources. Kindly refer to the description in the section "Authorization"
 
-## Authentication
-
-See the section "Get Kubeconfig" on how to authenticate and setup you local kubernetes config.
-
 ## stunnel
 
 As the kubernets commnand line tools to not support multiple factors for authentication, we tunnel the HTTPS traffic through an additional TLS tunnel. Refer to the seperate documentation in "Setting up stunnel" on how to obtain a client certificate and how to setup stunnel
+
+## Authentication
+
+See the section "Get Kubeconfig" on how to authenticate and setup you local kubernetes config.
 
 ## Authorization
 
