@@ -13,14 +13,15 @@ stunnel can be downloaded as binary for the most common operation systems, or it
 
 ## Obtain client certificate
 
-Request a client certificate here [Todo: Integrate Self Service PKI](https://does.not.exist.yet)
+Request a client certificate here [Todo: Integrate Self Service PKI](https://does.not.exist.yet) 
+(Work In Progress - Implement user's certs as a part of DaiVB Kubernetes Login page)
 
 stunnel expects the client certificate in the form of a pem file, containing certificate and private key (can be encrypted). Here's a good resource explaining on how to generate a pem file in case the PKI provides th credentials in a different format [Stackoverflow](https://stackoverflow.com/questions/9497719/extract-public-private-key-from-pkcs12-file-for-later-use-in-ssh-pk-authenticati) 
 
 ## Setup stunnel
 
 1. Create a directory and navigate to it
-2. Place the pem file containing your cert/private key in a file call `daivb-kube-client.pem`
+2. Place the pem file containing your client cert/private key in a file call `daivb-kube-client.pem`
 3. Create a self-signed certificate with CN=localhost and place it in `localhost.pem`
 
 ```bash
@@ -51,6 +52,7 @@ connect = dvb-kubernetes-poc-int-ece.daimler.com:443
 cert = daivb-kube-client.pem
 key =  daivb-kube-client.pem
 ```
+
 
 *Note*: By default, stunnel will start to listen for connections from `kubectl` or `helm` on localhost:7000. If you change this port, remember to also change it in your local kubeconfig file. We suggest to leave this untouched. 
  

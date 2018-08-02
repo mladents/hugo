@@ -11,7 +11,7 @@ weight: 10
 2. Install stunnel and deploy config file
 3. Login to [dex-k8s-authentication](https://dvb-admin-poc-int-ece.daimler.com/dex-kubernetes-auth/) and install certificates/create kubeconfig
 4. Authorization
-    1. If you are an admin user: Provide the value of the sub claim to the support 
+    1. If you are an workspace admin user: Provide the value of the sub claim to the kubernetes support 
     2. If you are a regular user: Provide the value of the sub claim to the workspace leads and ask them to add your subject to the specific role bindings 
 
 ## Overview
