@@ -20,7 +20,7 @@ stunnel expects the client certificate in the form of a pem file, containing cer
 
 ## Setup stunnel
 
-1. Create a directory and navigate to it
+1. Create a directory stunnel in your user home directory and navigate to it
 2. Place the pem file containing your client cert/private key in a file call `daivb-kube-client.pem`
 3. Create a self-signed certificate with CN=localhost and place it in `localhost.pem`
 
