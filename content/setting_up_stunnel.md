@@ -28,8 +28,7 @@ HINT: Convert/export your client certificate using commands:
 ```bash
 openssl pkcs12 -in YOUR_CLIENT_CERT_FILE.pfx -nocerts -out daivb-kube-client-key.pem
 openssl pkcs12 -in YOUR_CLIENT_CERT_FILE.pfx -nokeys -clcerts -out daivb-kube-client-cert.pem
-```
-
+```  
 
 ## Setup stunnel
 
@@ -40,9 +39,7 @@ openssl pkcs12 -in YOUR_CLIENT_CERT_FILE.pfx -nokeys -clcerts -out daivb-kube-cl
 ```bash
 openssl req -new -newkey rsa:2048 -days 365 -subj '/CN=localhost' -nodes -x509 -keyout localhost.key -out localhost.crt
 cat localhost.crt localhost.key > localhost.pem
-```
-
-
+```  
 4. Create a config file called `stunnel-daivbkube.conf` and add the following content
 
 ```text
@@ -51,13 +48,11 @@ foreground = yes
 debug = 7
 output = stunnel.log
 
-
 [daivb-kube-tunnel-in]
 client = no
 accept = localhost:7000
 connect = localhost:6000
 cert = localhost.pem
-
 
 [daivb-kube-tunnel-out]
 client = yes
@@ -65,8 +60,7 @@ accept = localhost:6000
 connect = dvb-kubernetes-poc-int-ece.daimler.com:443
 cert = daivb-kube-client-cert.pem
 key =  daivb-kube-client-key.pem
-```
-
+```  
 
 
 *Note*: By default, stunnel will start to listen for connections from `kubectl` or `helm` on localhost:7000. If you change this port, remember to also change it in your local kubeconfig file. We suggest to leave this untouched. 
