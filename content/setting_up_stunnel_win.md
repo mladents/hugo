@@ -53,14 +53,12 @@ openssl req -new -newkey rsa:2048 -days 365 -subj '/CN=localhost' -nodes -x509 -
 echo ';Debugging stuff (may be useful for troubleshooting)
 debug = 7
 ;output = stunnel.log
-
 [daivb-kube-tunnel-in]
 client = no
 accept = localhost:7000
 connect = localhost:6000
 cert = localhost.crt
 key =  localhost.key
-
 [daivb-kube-tunnel-out]
 client = yes
 accept = localhost:6000
