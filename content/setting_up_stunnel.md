@@ -60,8 +60,8 @@ accept = localhost:6000
 connect = dvb-kubernetes-poc-int-ece.daimler.com:443
 cert = daivb-kube-client-cert.pem
 key =  daivb-kube-client-key.pem
-```  
-##
+```     
 
-*Note*: By default, stunnel will start to listen for connections from `kubectl` or `helm` on localhost:7000. If you change this port, remember to also change it in your local kubeconfig file. We suggest to leave this untouched. 
+## *Note*
+By default, stunnel will start to listen for connections from `kubectl` or `helm` on localhost:7000. If you change this port, remember to also change it in your local kubeconfig file. We suggest to leave this untouched. 
  
