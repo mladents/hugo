@@ -30,6 +30,7 @@ openssl pkcs12 -in YOUR_CLIENT_CERT_FILE.pfx -nocerts -out daivb-kube-client-key
 openssl pkcs12 -in YOUR_CLIENT_CERT_FILE.pfx -nokeys -clcerts -out daivb-kube-client-cert.pem
 ```
 
+
 ## Setup stunnel
 
 1. Create a directory stunnel in your user home directory and navigate to it
@@ -40,6 +41,7 @@ openssl pkcs12 -in YOUR_CLIENT_CERT_FILE.pfx -nokeys -clcerts -out daivb-kube-cl
 openssl req -new -newkey rsa:2048 -days 365 -subj '/CN=localhost' -nodes -x509 -keyout localhost.key -out localhost.crt
 cat localhost.crt localhost.key > localhost.pem
 ```
+
 
 4. Create a config file called `stunnel-daivbkube.conf` and add the following content
 
@@ -64,6 +66,7 @@ connect = dvb-kubernetes-poc-int-ece.daimler.com:443
 cert = daivb-kube-client-cert.pem
 key =  daivb-kube-client-key.pem
 ```
+
 
 
 *Note*: By default, stunnel will start to listen for connections from `kubectl` or `helm` on localhost:7000. If you change this port, remember to also change it in your local kubeconfig file. We suggest to leave this untouched. 

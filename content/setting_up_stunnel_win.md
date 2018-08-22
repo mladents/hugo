@@ -9,8 +9,7 @@ weight: 21
 
 ## Download and install stunnel
 
-stunnel can be downloaded as binary for the most common operation systems, or it can be compiled from source. You will find the most current version on the project website: [stunnel](https://www.stunnel.org/). Install stunnel using win32 installer (accepting default values!!!). 
-Installation folder should be: `C:\Program Files (x86)\stunnel`
+stunnel can be downloaded as binary for the most common operation systems, or it can be compiled from source. You will find the most current version on the project website: [stunnel](https://www.stunnel.org/). Install stunnel using win32 installer (accepting default values!!!). Installation folder should be: `C:\Program Files (x86)\stunnel`
 
 
 ## Download and install kubectl
@@ -20,6 +19,7 @@ Recommended way of kubectl installation on Windows is using Chocolatey installer
 ```bash
 choco install kubernetes-cli
 ```
+
 
 Useful links: [Chocolatey installation](https://chocolatey.org/install) and [Install kubectl with Chocolatey](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-chocolatey-on-windows)
 
@@ -52,6 +52,7 @@ $env:Path += ";C:\Program Files (x86)\stunnel\bin\"
 openssl req -new -newkey rsa:2048 -days 365 -subj '/CN=localhost' -nodes -x509 -keyout $stunnel_config\localhost.key -out $stunnel_config\localhost.crt -config $stunnel_config\openssl.cnf
 ```
 
+
 4. Create a config file called `stunnel.conf`. Use Powershell console from previous step and type:
 
 ```bash
@@ -73,6 +74,7 @@ connect = dvb-kubernetes-poc-int-ece.daimler.com:443
 cert = daivb-kube-client-cert.pem
 key =  daivb-kube-client-key.pem' | Out-File -encoding Utf8 $stunnel_config\stunnel.conf
 ```
+
 
 
 *Note*: By default, stunnel will start to listen for connections from `kubectl` or `helm` on localhost:7000. If you change this port, remember to also change it in your local kubeconfig file. We suggest to leave this untouched. 
