@@ -35,7 +35,6 @@ openssl pkcs12 -in YOUR_CLIENT_CERT_FILE.pfx -nokeys -clcerts -out daivb-kube-cl
 1. Create a directory stunnel in your user home directory and navigate to it
 2. Place the pem files containing your client cert/private key in stunnel folder.
 3. Create a self-signed certificate with CN=localhost and place it in `localhost.pem`
-
 ```bash
 openssl req -new -newkey rsa:2048 -days 365 -subj '/CN=localhost' -nodes -x509 -keyout localhost.key -out localhost.crt
 cat localhost.crt localhost.key > localhost.pem
