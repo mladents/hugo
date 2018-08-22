@@ -42,11 +42,9 @@ openssl pkcs12 -in YOUR_CLIENT_CERT_FILE.pfx -nokeys -clcerts -out daivb-kube-cl
 1. During installation, stunnel creates a folder structure in `C:\Program Files (x86)\stunnel`. Open Powershell console (as Admin!!!) and navigate to config folder (`C:\Program Files (x86)\stunnel\config`)
 2. Place the pem files containing your client cert/private key in folder `C:\Program Files (x86)\stunnel\config`
 3. Create a self-signed certificate with `CN=localhost`. In Powershell console (started as Admin!!!) type these commands:
-```text
+```bash
 $stunnel_config='C:\Program Files (x86)\stunnel\config'
-
 $env:Path += ';C:\Program Files (x86)\stunnel\bin'
-
 openssl req -new -newkey rsa:2048 -days 365 -subj '/CN=localhost' -nodes -x509 -keyout $stunnel_config\localhost.key -out $stunnel_config\localhost.crt -config $stunnel_config\openssl.cnf
 ```
 
