@@ -38,7 +38,8 @@ openssl pkcs12 -in YOUR_CLIENT_CERT_FILE.pfx -nokeys -clcerts -out daivb-kube-cl
 ```bash
 openssl req -new -newkey rsa:2048 -days 365 -subj '/CN=localhost' -nodes -x509 -keyout localhost.key -out localhost.crt
 cat localhost.crt localhost.key > localhost.pem
-```  
+```
+
 4. Create a config file called `stunnel-daivbkube.conf` and add the following content
 
 ```text
