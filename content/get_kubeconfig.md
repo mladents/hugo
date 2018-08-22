@@ -11,6 +11,9 @@ In order to obtain the id_token, visit the DaiVB Kubernetes Service portal first
 
 Once authenticated, follow exactly the steps as outlined and create your kubernetes config file. This file is used by both `kubectl` and `helm` comamnd line tools likewise to access the kubernetes cluster.
 
+After some time you may have an issue connecting to the Kubernetes. That's probably due the token refresh issue. Current workaround is to go to the Login page 
+again, copy the new token value and paste it into your config file.  
+
 ## Authorization
 
 Copy the value of your "sub" field from the token details (the beginning of the DaiVB Kubernetes Login page). You need to send this value to your Workspace Operator/Kubernetes Admin in order to get access to the kubernetes resources.    
